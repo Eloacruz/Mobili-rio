@@ -269,3 +269,256 @@ body {
     flex-direction: column;
   }
 }
+/* ==============================
+   🎯 BANNER PROMOCIONAL - IMAGEM DESFOCADA
+   - .promo-banner: container relativo que empilha camadas.
+   - .promo-bg: imagem de fundo com filtro blur para ficar desfocada.
+   - .promo-content: conteúdo nítido por cima, alinhado com a .container.
+================================*/
+
+/* container principal do banner (altura generosa para impacto visual) */
+.promo-banner {
+  position: relative;            /* permite posicionar camadas por cima/baixo */
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 1rem 0;
+  min-height: 260px;             /* altura base do banner */
+  display: flex;
+  align-items: center;
+}
+
+/* camada de fundo: usa background-image, cobrindo toda a área */
+.promo-bg {
+  position: absolute;
+  inset: 0;                      /* top/right/bottom/left = 0 -> ocupa tudo */
+  background-size: cover;
+  background-position: center;
+  filter: blur(6px) saturate(1.05);
+  transform: scale(1.03);        /* escala pra evitar bordas vazias ao aplicar blur */
+  z-index: 0;
+  opacity: 0.95;
+  
+  background-image: url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1800&auto=format&fit=crop");
+}
+
+/* camada de overlay suave para garantir legibilidade do texto */
+.promo-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.28));
+  z-index: 1;
+}
+
+/* conteúdo do banner (nítido e legível) */
+.promo-content {
+  position: relative;            /* fica acima da imagem (z-index 2) */
+  z-index: 2;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* bloco do texto (max-width para leitura confortável) */
+.promo-copy {
+  color: white;
+  max-width: 720px;
+  backdrop-filter: none;
+}
+
+/* pequena etiqueta acima do título */
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.95;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* título grande com destaque no OFF */
+.promo-copy h2 {
+  font-size: 2.2rem;
+  margin: 0.15rem 0 0.5rem;
+  line-height: 1;
+  font-weight: 700;
+}
+.promo-copy h2 span {
+  background: white;
+  color: var(--accent);
+  padding: 0.15rem 0.5rem;
+  border-radius: 6px;
+  margin-left: 0.4rem;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+/* descrição menor abaixo do título */
+.promo-copy .lead {
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 1rem;
+}
+
+/* alinhamento dos botões (usa o botão já definido .btn-primary e .btn-ghost) */
+.promo-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* pequenas melhorias para contraste do botão primário no banner */
+.promo-banner .btn-primary {
+  background: white;
+  color: var(--accent);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.promo-banner .btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+.promo-banner .btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.95);
+}
+
+/* destaque visual extra para telas grandes (posição do conteúdo um pouco deslocada) */
+@media (min-width: 1000px) {
+  .promo-content { padding-left: 0; }
+  .promo-copy { margin-left: 0; }
+}
+
+/* responsividade: ajustar altura e fonte em telas menores */
+@media (max-width: 700px) {
+  .promo-banner { min-height: 220px; border-radius: 8px; }
+  .promo-copy h2 { font-size: 1.4rem; }
+  .promo-copy h2 span { font-size: 0.9rem; padding: 0.12rem 0.4rem; }
+  .promo-content { padding: 1.25rem; }
+  .promo-actions { flex-direction: column; align-items: stretch; }
+  .promo-banner .btn-primary { width: 100%; }
+}
+.about-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 70%;
+}
+
+/* grade dos tópicos */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.info-card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+}
+
+.info-card h4 {
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.info-card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* imagem do lado direito */
+.about-image {
+  flex: 0 0 220px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-image img {
+  width: 150%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 800px) {
+  .about-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-image {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .about-image img {
+    width: 160px;
+  }
+}
+.about-image {
+  flex: 0 0 220px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 200px; /* 🔹 move a imagem pra baixo */
+}
+.about-image {
+  flex: 0 0 220px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 80px; /* 🔹 move levemente pra baixo, antes tava 200px */
+}
+
+.about-image img {
+  width: 150%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 800px) {
+  .about-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-image {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .about-image img {
+    width: 500px;
+  }
+}

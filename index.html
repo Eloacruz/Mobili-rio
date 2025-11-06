@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobiliária</title>
-    <link rel="icon" type="image/png" href="../Mobili-rio/imagens/Captura de tela 2025-11-01 171239.png">
-</head>
-<body>
-    
-<!-- 🔗 Importa o arquivo CSS externo -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ateliê Móveis</title>
+  <link rel="icon" type="image/png" href="imagens/Captura de tela 2025-11-01 171239.png">
   <link rel="stylesheet" href="styles.css">
-
-  <!-- 🔤 Fontes externas do Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <!-- ================= CABEÇALHO ================= -->
-  <!-- Cabeçalho fixo com logotipo e menu de navegação -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -24,144 +18,194 @@
         <p class="tag">Design feito para morar</p>
       </div>
 
-      <!-- Menu de navegação -->
       <nav class="nav">
         <ul>
           <li><a href="#colecoes">Coleções</a></li>
+          <li><a href="#colecao">Nossa Coleção</a></li>
           <li><a href="#novidades">Novidades</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a class="btn-outline" href="#contato">Contato</a></li>
         </ul>
       </nav>
 
-      <!-- Botão que aparece no modo mobile -->
       <button class="menu-toggle" aria-label="Abrir menu">☰</button>
     </div>
   </header>
 
-  <!-- ================= CONTEÚDO PRINCIPAL ================= -->
-  <main>
-    <!-- Seção de destaque (hero) -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <h2>Mobília com alma — <span>feita para durar</span></h2>
-          <p>Peças com design atemporal e materiais de alta qualidade. Entrega em todo o Brasil.</p>
-          <div class="cta-row">
-            <a class="btn-primary" href="#colecoes">Ver Coleções</a>
-            <a class="btn-ghost" href="#novidades">Ver Novidades</a>
+  <!-- ================= BANNER PROMOCIONAL ================= -->
+  <section class="promo-banner" aria-label="Promoção - 40% off">
+    <div class="promo-bg" aria-hidden="true"></div>
+    <div class="promo-content container">
+      <div class="promo-copy">
+        <p class="eyebrow">Ofertas da Semana</p>
+        <h2><span>40%</span> OFF em móveis selecionados</h2>
+        <p class="lead">Design atemporal e materiais sustentáveis — só por tempo limitado.</p>
+        <div class="promo-actions">
+          <a class="btn-primary" href="#colecoes">Ver Coleções</a>
+          <a class="btn-ghost" href="#novidades">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h2>Mobília com alma — <span>feita para durar</span></h2>
+        <p>Peças com design atemporal e materiais de alta qualidade. Entrega em todo o Brasil.</p>
+        <div class="cta-row">
+          <a class="btn-primary" href="#colecoes">Ver Coleções</a>
+          <a class="btn-ghost" href="#novidades">Ver Novidades</a>
+        </div>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <img src="imagens/Captura de tela 2025-11-01 165636.png" alt="Sala de estar elegante">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COLEÇÕES EM DESTAQUE ================= -->
+  <section id="colecoes" class="section">
+    <div class="container">
+      <h3 class="section-title">Coleções em Destaque</h3>
+      <p class="section-desc">Explore linhas que misturam tradição e contemporaneidade.</p>
+
+      <div class="products-grid">
+        <article class="card">
+          <img src="imagens/Captura de tela 2025-11-01 165314.png" alt="Sofá Minimal" class="card-img">
+          <div class="card-body">
+            <h4 class="card-title">Sofá Minimal</h4>
+            <p class="card-excerpt">Sofá 3 lugares em linho e madeira maciça.</p>
+            <div class="card-meta">
+              <span class="price">R$ 3.499</span>
+              <a href="#" class="btn-small">Ver</a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <!-- Imagem da seção principal -->
-        <div class="hero-image" aria-hidden="true">
-          <img src="../Mobili-rio/imagens/Captura de tela 2025-11-01 165636.png" alt="Sala de estar elegante">
+        <article class="card">
+          <img src="imagens/Captura de tela 2025-11-01 163758.png" alt="Cadeira Scandi" class="card-img">
+          <div class="card-body">
+            <h4 class="card-title">Cadeira Scandi</h4>
+            <p class="card-excerpt">Assento ergonômico e estrutura em carvalho.</p>
+            <div class="card-meta">
+              <span class="price">R$ 799</span>
+              <a href="#" class="btn-small">Ver</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format&fit=crop" alt="Mesa Aurora" class="card-img">
+          <div class="card-body">
+            <h4 class="card-title">Mesa Aurora</h4>
+            <p class="card-excerpt">Mesa de jantar para 6 pessoas com acabamento natural.</p>
+            <div class="card-meta">
+              <span class="price">R$ 2.199</span>
+              <a href="#" class="btn-small">Ver</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="imagens/Captura de tela 2025-11-01 164418.png" alt="Estante Modular" class="card-img">
+          <div class="card-body">
+            <h4 class="card-title">Estante Modular</h4>
+            <p class="card-excerpt">Estante personalizável para qualquer ambiente.</p>
+            <div class="card-meta">
+              <span class="price">R$ 1.599</span>
+              <a href="#" class="btn-small">Ver</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOSSA COLEÇÃO - ELEGANCE ================= -->
+  <section id="colecao" class="section alt">
+    <div class="container">
+      <h3 class="section-title">Nossa Coleção ✨</h3>
+      <p class="section-desc">Conheça a linha <strong>Elegance</strong> — um toque de sofisticação e conforto para seu ambiente.</p>
+
+      <div class="products-grid">
+        <article class="card">
+          <img src="imagens/Captura de tela 2025-11-06 015945.png" alt="Sofá moderno" class="card-img">
+          <div class="card-body">
+            <h4>. 🛋️ Sofá Milano</h4>
+            <p>Conforto e elegância no seu lar.</p>
+            <div class="card-meta">
+              <span class="price">R$ 899</span>
+              <a href="#" class="btn-small">Ver mais</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="../Mobili-rio/imagens/Captura de tela 2025-11-06 021613.png" alt="Cadeira elegante" class="card-img">
+          <div class="card-body">
+            <h4>. 🪑 Cadeira Siena</h4>
+            <p>Perfeita para salas de jantar.</p>
+            <div class="card-meta">
+              <span class="price">R$ 499</span>
+              <a href="#" class="btn-small">Ver mais</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="../Mobili-rio/imagens/Captura de tela 2025-11-06 021747.png" alt="Mesa sofisticada" class="card-img">
+          <div class="card-body">
+            <h4>. 🍽️ Mesa Verona</h4>
+            <p>Ideal para refeições em família.</p>
+            <div class="card-meta">
+              <span class="price">R$ 1.299</span>
+              <a href="#" class="btn-small">Ver mais</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOVIDADES ================= -->
+  <section id="novidades" class="section">
+    <div class="container">
+      <h3 class="section-title">🆕 Novidades</h3>
+      <p class="section-desc">Confira o que há de novo no Ateliê Móveis:</p>
+
+      <div class="news-grid">
+        <article class="news"><h4>. 🌱 Nova Linha Sustentável</h4><p>Feita com madeira de reflorestamento e acabamentos ecológicos.</p></article>
+        <article class="news"><h4>. 🛒 Compre Online, Retire na Loja</h4><p>Frete grátis e retirada em até 48h!</p></article>
+        <article class="news"><h4>. 🖼️ Consultoria de Decoração</h4><p>Monte o ambiente dos seus sonhos com nossos designers.</p></article>
+        <article class="news"><h4>. ✨ Coleção “Elegance”</h4><p>Mistura perfeita entre conforto e sofisticação.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOBRE ================= -->
+  <section id="sobre" class="section">
+    <div class="container about-flex">
+      <div class="about-text">
+        <h3 class="section-title">Saiba mais sobre o Ateliê Móveis</h3>
+        <p class="section-desc">Descubra o que faz nossos móveis serem únicos:</p>
+
+        <div class="info-grid">
+          <article class="info-card"><h4>. 🌱 Sustentabilidade</h4><p>Utilizamos madeira de reflorestamento e tintas ecológicas.</p></article>
+          <article class="info-card"><h4>. 🪵 Materiais Premium</h4><p>Trabalhamos com madeira maciça e tecidos naturais.</p></article>
+          <article class="info-card"><h4>. 🎨 Design Autoral</h4><p>Peças criadas artesanalmente com atenção aos detalhes.</p></article>
+          <article class="info-card"><h4>. 🛠️ Personalização</h4><p>Escolha tamanhos, cores e acabamentos do seu jeito.</p></article>
+          <article class="info-card"><h4>. 🚚 Entrega Nacional</h4><p>Enviamos com rastreamento e embalagem reforçada.</p></article>
+          <article class="info-card"><h4>. 💬 Consultoria Grátis</h4><p>Especialistas em design prontos pra te ajudar!</p></article>
         </div>
       </div>
-    </section>
 
-    <!-- ================= COLEÇÕES ================= -->
-    <section id="colecoes" class="section">
-      <div class="container">
-        <h3 class="section-title">Coleções em destaque</h3>
-        <p class="section-desc">Explore linhas que misturam tradição e contemporaneidade.</p>
-
-        <!-- Grade de produtos feita com CSS Grid -->
-        <div class="products-grid">
-          <!-- Card de produto 1 -->
-          <article class="card">
-            <img src="../Mobili-rio/imagens/Captura de tela 2025-11-01 165314.png" alt="Sofá Minimal" class="card-img">
-            <div class="card-body">
-              <h4 class="card-title">Sofá Minimal</h4>
-              <p class="card-excerpt">Sofá 3 lugares em linho e madeira maciça.</p>
-              <div class="card-meta">
-                <span class="price">R$ 3.499</span>
-                <a href="#" class="btn-small">Ver</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="card">
-            <img src="../Mobili-rio/imagens/Captura de tela 2025-11-01 163758.png" alt="Cadeira Scandi" class="card-img">
-            <div class="card-body">
-              <h4 class="card-title">Cadeira Scandi</h4>
-              <p class="card-excerpt">Assento ergonômico e estrutura em carvalho.</p>
-              <div class="card-meta">
-                <span class="price">R$ 799</span>
-                <a href="#" class="btn-small">Ver</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=800&auto=format&fit=crop" alt="Mesa Aurora" class="card-img">
-            <div class="card-body">
-              <h4 class="card-title">Mesa Aurora</h4>
-              <p class="card-excerpt">Mesa de jantar para 6 pessoas com acabamento natural.</p>
-              <div class="card-meta">
-                <span class="price">R$ 2.199</span>
-                <a href="#" class="btn-small">Ver</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 4 -->
-          <article class="card">
-            <img src="../Mobili-rio/imagens/Captura de tela 2025-11-01 164418.png" alt="Estante Modular" class="card-img">
-            <div class="card-body">
-              <h4 class="card-title">Estante Modular</h4>
-              <p class="card-excerpt">Estante personalizável para qualquer ambiente.</p>
-              <div class="card-meta">
-                <span class="price">R$ 1.599</span>
-                <a href="#" class="btn-small">Ver</a>
-              </div>
-            </div>
-          </article>
-        </div>
+      <div class="about-image">
+        <img src="imagens/Captura de tela 2025-11-01 170211.png" alt="Produção artesanal">
       </div>
-    </section>
-
-    <!-- ================= NOVIDADES ================= -->
-    <section id="novidades" class="section alt">
-      <div class="container">
-        <h3 class="section-title">Novidades</h3>
-        <div class="news-grid">
-          <article class="news">
-            <h4>Nova linha sustentável</h4>
-            <p>Madeira de reflorestamento e acabamentos ecológicos.</p>
-          </article>
-          <article class="news">
-            <h4>Compre online, retire na loja</h4>
-            <p>Frete grátis para retirada em até 48h.</p>
-          </article>
-          <article class="news">
-            <h4>Consultoria de decoração</h4>
-            <p>Agende uma visita com nossos designers.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= SOBRE ================= -->
-    <section id="sobre" class="section">
-      <div class="container about-grid">
-        <div class="about-text">
-          <h3>Sobre nós</h3>
-          <p>Produzimos móveis com foco em design durável e sustentável, valorizando a produção local.</p>
-          <ul>
-            <li>Entrega nacional</li>
-            <li>Garantia de 2 anos</li>
-            <li>Personalização sob medida</li>
-          </ul>
-        </div>
-        <div class="about-card">
-          <img src="../Mobili-rio/imagens/Captura de tela 2025-11-01 170211.png" alt="Produção artesanal">
-        </div>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- ================= RODAPÉ ================= -->
   <footer class="site-footer" id="contato">
@@ -173,11 +217,11 @@
       </div>
       <div>
         <h4>Horário</h4>
-        <p>Seg — Sex: 9:00 — 18:00</p>
-        <p>Sáb: 10:00 — 14:00</p>
+        <p>Seg — Sex: 9h às 18h</p>
+        <p>Sáb: 10h às 14h</p>
       </div>
       <div>
-        <h4>Insira seu Email abaixo para receber mais informações de nossa página↓✉</h4>
+        <h4>Receba Novidades ✉️</h4>
         <form class="newsletter" onsubmit="event.preventDefault(); alert('Obrigado!');">
           <input type="email" placeholder="Seu e-mail" required>
           <button class="btn-primary">Inscrever</button>
@@ -186,17 +230,6 @@
     </div>
     <div class="credits">© <span id="year"></span> Ateliê Móveis</div>
   </footer>
-
-  <!-- Script: atualiza o ano e controla o menu mobile -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const toggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav');
-    toggle.addEventListener('click', ()=> nav.classList.toggle('open'));
-  </script>
-</body>
-</html>
-
 
 </body>
 </html>
