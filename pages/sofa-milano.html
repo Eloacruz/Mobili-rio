@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sofá Milano - Detalhes e Compra</title>
+ <link rel="stylesheet" href="../css/styles.css"> <!-- Correção aqui -->
+  <link rel="stylesheet" href="../css/sofa-milano.css"> <!-- Correção aqui -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <!-- Seu cabeçalho aqui (igual ao da página principal) -->
+  </header>
+
+  <main class="container">
+  <!-- Detalhes principais do produto -->
+  <div class="product-detail">
+    <div class="product-images">
+      <img src="../imagens/Captura de tela 2025-11-06 015945.png" alt="Sofá Milano - Imagem 1" class="main-image">
+    </div>
+
+    <div class="product-info">
+      <h1>Sofá Milano</h1>
+      <p class="price">R$ 899,00</p>
+      <div class="description">
+        <p>O Sofá Milano é a combinação perfeita de conforto e estilo. Com design moderno e materiais de alta qualidade, ele se adapta a qualquer ambiente.</p>
+      </div>
+
+      <div class="actions">
+        <button class="add-to-cart">Adicionar ao Carrinho</button>
+        <button class="buy-now">Comprar Agora</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Review do produto -->
+  <section class="product-review">
+    <div class="review-grid">
+      <!-- VÍDEO à esquerda -->
+      <div class="review-video">
+        <video autoplay muted loop playsinline>
+          <source src="../videosprodutos/sofa-milano.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+      </div>
+
+      <!-- TEXTO à direita -->
+      <div class="review-text">
+        <h2>🎬 Review do Sofá Milano</h2>
+        <p>O Sofá Milano redefine o conforto. Seu design minimalista e estofamento macio proporcionam uma experiência de descanso incomparável. Ideal para quem busca sofisticação com praticidade.</p>
+        <p><strong>Destaques:</strong></p>
+        <ul>
+          <li>✔️ Tecido premium resistente a manchas</li>
+          <li>✔️ Estrutura em madeira reflorestada</li>
+          <li>✔️ Design moderno e versátil</li>
+        </ul>
+
+        <section class="product-specs">
+          <h3>📏 Detalhes Técnicos</h3>
+          <ul>
+            <li><strong>Dimensões:</strong> 2,10m x 0,90m x 0,85m</li>
+            <li><strong>Material:</strong> Madeira maciça e tecido linho</li>
+            <li><strong>Cores disponíveis:</strong> Bege, cinza e verde oliva</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-center">
+    <h4>Ateliê Móveis</h4>
+  </div>
+
+  <div class="credits">
+    © <span id="year"></span> Ateliê Móveis | Feito por 
+    <strong>Eloa e Calebe — 1ª Informática 💻</strong>
+  </div>
+</footer>
+
+<script>
+  // Atualiza automaticamente o ano
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+
+</body>
+</html>

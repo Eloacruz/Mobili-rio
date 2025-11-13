@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ateliê Móveis</title>
   <link rel="icon" type="image/png" href="imagens/Captura de tela 2025-11-01 171239.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -33,8 +33,7 @@
   </header>
 
   <!-- ================= BANNER PROMOCIONAL ================= -->
-  <section class="promo-banner" aria-label="Promoção - 40% off">
-    <div class="promo-bg" aria-hidden="true"></div>
+  <section class="promo-banner">
     <div class="promo-content container">
       <div class="promo-copy">
         <p class="eyebrow">Ofertas da Semana</p>
@@ -59,7 +58,7 @@
           <a class="btn-ghost" href="#novidades">Ver Novidades</a>
         </div>
       </div>
-      <div class="hero-image" aria-hidden="true">
+      <div class="hero-image">
         <img src="imagens/Captura de tela 2025-11-01 165636.png" alt="Sala de estar elegante">
       </div>
     </div>
@@ -72,50 +71,51 @@
       <p class="section-desc">Explore linhas que misturam tradição e contemporaneidade.</p>
 
       <div class="products-grid">
+        <!-- Cada produto destacado -->
         <article class="card">
           <img src="imagens/Captura de tela 2025-11-01 165314.png" alt="Sofá Minimal" class="card-img">
           <div class="card-body">
             <h4 class="card-title">Sofá Minimal</h4>
-            <p class="card-excerpt">Sofá 3 lugares em linho e madeira maciça.</p>
+            <p>Sofá 3 lugares em linho e madeira maciça.</p>
             <div class="card-meta">
               <span class="price">R$ 3.499</span>
-              <a href="#" class="btn-small">Ver</a>
+              <a href="pages/sofa-minimal.html" class="btn-small">Ver mais</a>
             </div>
           </div>
         </article>
 
         <article class="card">
-          <img src="../Mobili-rio/imagens/Captura de tela 2025-11-06 015945.png" alt="Cadeira Scandi" class="card-img">
+          <img src="imagens/Captura de tela 2025-11-01 163758.png" alt="Cadeira Scandi" class="card-img">
           <div class="card-body">
-            <h4 class="card-title">Cadeira Scandi</h4>
-            <p class="card-excerpt">Assento ergonômico e estrutura em carvalho.</p>
+            <h4>Cadeira Scandi</h4>
+            <p>Assento ergonômico e estrutura em carvalho.</p>
             <div class="card-meta">
               <span class="price">R$ 799</span>
-              <a href="#" class="btn-small">Ver</a>
+              <a href="pages/cadeira-scandi.html" class="btn-small">Ver mais</a>
             </div>
           </div>
         </article>
 
         <article class="card">
-          <img src="../Mobili-rio/imagens/Captura de tela 2025-11-06 021613.png" alt="Mesa Aurora" class="card-img">
+          <img src="imagens/Captura de tela 2025-11-09 152944.png" alt="Mesa Aurora" class="card-img">
           <div class="card-body">
-            <h4 class="card-title">Mesa Aurora</h4>
-            <p class="card-excerpt">Mesa de jantar para 6 pessoas com acabamento natural.</p>
+            <h4>Mesa Aurora</h4>
+            <p>Mesa de jantar para 6 pessoas com acabamento natural.</p>
             <div class="card-meta">
               <span class="price">R$ 2.199</span>
-              <a href="#" class="btn-small">Ver</a>
+              <a href="pages/mesa-aurora.html" class="btn-small">Ver mais</a>
             </div>
           </div>
         </article>
 
         <article class="card">
-          <img src="../Mobili-rio/imagens/Captura de tela 2025-11-06 021747.png" alt="Estante Modular" class="card-img">
+          <img src="imagens/Captura de tela 2025-11-01 164418.png" alt="Estante Modular" class="card-img">
           <div class="card-body">
-            <h4 class="card-title">Estante Modular</h4>
-            <p class="card-excerpt">Estante personalizável para qualquer ambiente.</p>
+            <h4>Estante Modular</h4>
+            <p>Estante personalizável para qualquer ambiente.</p>
             <div class="card-meta">
               <span class="price">R$ 1.599</span>
-              <a href="#" class="btn-small">Ver</a>
+              <a href="pages/estante-modular.html" class="btn-small">Ver mais</a>
             </div>
           </div>
         </article>
@@ -123,7 +123,7 @@
     </div>
   </section>
 
-  <!-- ================= NOSSA COLEÇÃO - ELEGANCE ================= -->
+  <!-- ================= NOSSA COLEÇÃO ================= -->
   <section id="colecao" class="section alt">
     <div class="container">
       <h3 class="section-title">Nossa Coleção ✨</h3>
@@ -131,37 +131,25 @@
 
       <div class="products-grid">
         <article class="card">
-          <img src="imagens/Captura de tela 2025-11-06 015945.png" alt="Sofá moderno" class="card-img">
+          <img src="imagens/Captura de tela 2025-11-06 015945.png" alt="Sofá Milano" class="card-img">
           <div class="card-body">
-            <h4>. 🛋️ Sofá Milano</h4>
+            <h4>🛋️ Sofá Minimal</h4>
             <p>Conforto e elegância no seu lar.</p>
             <div class="card-meta">
               <span class="price">R$ 899</span>
-              <a href="#" class="btn-small">Ver mais</a>
+              <a href="pages/sofa-milano.html" class="btn-small">Ver mais</a>
             </div>
           </div>
         </article>
 
         <article class="card">
-          <img src="../Mobili-rio/imagens/Captura de tela 2025-11-06 021613.png" alt="Cadeira elegante" class="card-img">
+          <img src="imagens/Captura de tela 2025-11-06 021613.png" alt="Cadeira Siena" class="card-img">
           <div class="card-body">
-            <h4>. 🪑 Cadeira Siena</h4>
+            <h4>🪑 Cadeira Siena</h4>
             <p>Perfeita para salas de jantar.</p>
             <div class="card-meta">
               <span class="price">R$ 499</span>
-              <a href="#" class="btn-small">Ver mais</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="../Mobili-rio/imagens/Captura de tela 2025-11-06 021747.png" alt="Mesa sofisticada" class="card-img">
-          <div class="card-body">
-            <h4>. 🍽️ Mesa Verona</h4>
-            <p>Ideal para refeições em família.</p>
-            <div class="card-meta">
-              <span class="price">R$ 1.299</span>
-              <a href="#" class="btn-small">Ver mais</a>
+              <a href="pages/cadeira-siena.html" class="btn-small">Ver mais</a>
             </div>
           </div>
         </article>
@@ -175,23 +163,7 @@
       <h3 class="section-title">🆕 Novidades</h3>
       <p class="section-desc">Confira o que há de novo no Ateliê Móveis:</p>
 
-      <div class="news-grid">
-        <article class="news"><h4>. 🌱 Nova Linha Sustentável</h4><p>Feita com madeira de reflorestamento e acabamentos ecológicos.</p></article>
-        <article class="news"><h4>. 🛒 Compre Online, Retire na Loja</h4><p>Frete grátis e retirada em até 48h!</p></article>
-        <article class="news"><h4>. 🖼️ Consultoria de Decoração</h4><p>Monte o ambiente dos seus sonhos com nossos designers.</p></article>
-        <article class="news"><h4>. ✨ Coleção “Elegance”</h4><p>Mistura perfeita entre conforto e sofisticação.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= SOBRE ================= -->
-  <section id="sobre" class="section">
-    <div class="container about-flex">
-      <div class="about-text">
-        <h3 class="section-title">Saiba mais sobre o Ateliê Móveis</h3>
-        <p class="section-desc">Descubra o que faz nossos móveis serem únicos:</p>
-
-        <div class="info-grid">
+      <div class="info-grid">
           <article class="info-card"><h4>. 🌱 Sustentabilidade</h4><p>Utilizamos madeira de reflorestamento e tintas ecológicas.</p></article>
           <article class="info-card"><h4>. 🪵 Materiais Premium</h4><p>Trabalhamos com madeira maciça e tecidos naturais.</p></article>
           <article class="info-card"><h4>. 🎨 Design Autoral</h4><p>Peças criadas artesanalmente com atenção aos detalhes.</p></article>
@@ -199,37 +171,37 @@
           <article class="info-card"><h4>. 🚚 Entrega Nacional</h4><p>Enviamos com rastreamento e embalagem reforçada.</p></article>
           <article class="info-card"><h4>. 💬 Consultoria Grátis</h4><p>Especialistas em design prontos pra te ajudar!</p></article>
         </div>
+         <!-- Nova div para a imagem -->
+      <div class="novidades-image">
+        <img src="../Mobili-rio/imagens/Captura de tela 2025-11-01 170211.png" alt="Imagem Novidades">
       </div>
-
-      <div class="about-image">
-        <img src="imagens/Captura de tela 2025-11-01 170211.png" alt="Produção artesanal">
       </div>
-    </div>
   </section>
 
-  <!-- ================= RODAPÉ ================= -->
-  <footer class="site-footer" id="contato">
-    <div class="container footer-grid">
-      <div>
-        <h4>Ateliê Móveis</h4>
-        <p>Rua Brasil, 000 — São Paulo, SP</p>
-        <p>Telefone: (00) 0000-0000</p>
-      </div>
-      <div>
-        <h4>Horário</h4>
-        <p>Seg — Sex: 9h às 18h</p>
-        <p>Sáb: 10h às 14h</p>
-      </div>
-      <div>
-        <h4>Receba Novidades ✉️</h4>
-        <form class="newsletter" onsubmit="event.preventDefault(); alert('Obrigado!');">
-          <input type="email" placeholder="Seu e-mail" required>
-          <button class="btn-primary">Inscrever</button>
-        </form>
-      </div>
-    </div>
-    <div class="credits">© <span id="year"></span> Ateliê Móveis</div>
-  </footer>
+  
+
+ <footer class="site-footer">
+  <div class="container footer-center">
+    <h4>Ateliê Móveis</h4>
+
+    <!-- Campo para inscrição em novidades -->
+    <form class="newsletter" onsubmit="event.preventDefault(); alert('E-mail cadastrado com sucesso! 🎉');">
+      <input type="email" placeholder="Digite seu e-mail..." required>
+      <button type="submit">Inscrever-se para mais Novidades💌✨</button>
+    </form>
+  </div>
+
+  <div class="credits">
+    © <span id="year"></span> Ateliê Móveis | Feito por 
+    <strong>Eloa e Calebe — 1ª Informática 💻</strong>
+  </div>
+</footer>
+
+<script>
+  // Atualiza automaticamente o ano no rodapé
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+>
 
 </body>
 </html>

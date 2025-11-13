@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sofá Minimal - Detalhes e Compra</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/sofa-minimal.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <main class="container">
+    <div class="product-detail">
+      <div class="product-images">
+        <img src="../imagens/Captura de tela 2025-11-01 165314.png" alt="Sofá Minimal" class="main-image">
+      </div>
+
+      <div class="product-info">
+        <h1>Sofá Minimal</h1>
+        <p class="price">R$ 3.499,00</p>
+        <div class="description">
+          <p>O Sofá Minimal é a combinação perfeita entre conforto e design moderno. Com linhas retas, tecidos neutros e acabamento refinado, ele se adapta perfeitamente a qualquer ambiente elegante.</p>
+        </div>
+
+        <div class="actions">
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+          <button class="buy-now">Comprar Agora</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review do produto -->
+    <section class="product-review">
+      <div class="review-grid">
+        <div class="review-video">
+          <video autoplay muted loop playsinline>
+            <source src="../videosprodutos/sofa-minimal.mp4" type="video/mp4">
+            Seu navegador não suporta vídeo HTML5.
+          </video>
+        </div>
+
+        <div class="review-text">
+          <h2>🛋️ Review do Sofá Minimal</h2>
+          <p>Com design atemporal e conforto incomparável, o Sofá Minimal é perfeito para quem busca um toque moderno sem abrir mão da sofisticação. Feito com materiais de alta durabilidade e tecido macio ao toque.</p>
+
+          <p><strong>Destaques:</strong></p>
+          <ul>
+            <li>✨ Design clean e moderno</li>
+            <li>🧵 Tecido premium de fácil limpeza</li>
+            <li>🪵 Estrutura em madeira reflorestada</li>
+          </ul>
+
+          <section class="product-specs">
+            <h3>📏 Detalhes Técnicos</h3>
+            <ul>
+              <li><strong>Dimensões:</strong> 2,10m x 0,90m x 0,85m</li>
+              <li><strong>Material:</strong> Madeira e tecido de linho</li>
+              <li><strong>Cores disponíveis:</strong> Cinza, bege e areia</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-center">
+      <h4>Ateliê Móveis</h4>
+    </div>
+
+    <div class="credits">
+      © <span id="year"></span> Ateliê Móveis | Feito por 
+      <strong>Eloa e Calebe — 1ª Informática 💻</strong>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
