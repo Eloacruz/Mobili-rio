@@ -29,7 +29,10 @@
       </nav>
 
       <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-    </div>
+
+      <!-- Botão para alternar o modo escuro -->
+<button class="dark-mode-toggle">🌙 Modo Escuro</button>
+    </div> 
   </header>
 
   <!-- ================= BANNER PROMOCIONAL ================= -->
@@ -201,7 +204,65 @@
   // Atualiza automaticamente o ano no rodapé
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
->
+
+
+
+
+
+
+
+ <!--BOTAO JAVAAA-->
+<script>
+  // Seleciona o botão de alternância (botão do modo escuro) e o body da página
+  const darkModeToggle = document.querySelector(".dark-mode-toggle"); // pega o botão de modo escuro
+  const body = document.body; // pega o elemento body inteiro
+
+  // Checa se o tema escuro já estava ativado pelo usuário
+  if(localStorage.getItem("dark-mode") === "enabled") { // verifica no armazenamento local se o modo escuro está habilitado
+    body.classList.add("dark-mode"); // adiciona a classe dark-mode ao body
+  }
+
+  // Função que alterna o tema escuro quando o botão é clicado
+  darkModeToggle.addEventListener("click", () => { // adiciona evento de clique ao botão
+    body.classList.toggle("dark-mode"); // alterna a classe dark-mode (ativa se não estiver, desativa se estiver)
+    
+    // Salva a preferência do usuário no armazenamento local
+    if (body.classList.contains("dark-mode")) { // se o body tiver a classe dark-mode
+      localStorage.setItem("dark-mode", "enabled"); // salva que o modo escuro está ativado
+    } else {
+      localStorage.removeItem("dark-mode"); // se não tiver, remove a configuração do localStorage
+    }
+  });
+</script>
+
+<!--mensagem mouse fora de tela-->
+<script>
+  // Detecta quando o mouse sai da tela (usuário vai fechar a aba)
+  let avisoMostrado = false; // variável para controlar se o aviso já foi mostrado
+  
+  document.addEventListener("mouseleave", function (e) { // evento que dispara quando o mouse sai da área visível da página
+  {
+      avisoMostrado = true; // marca que o aviso já foi mostrado
+
+      // Criar a caixinha de aviso
+      const caixa = document.createElement("div"); // cria um elemento <div> para a mensagem
+      caixa.className = "exit-popup"; // adiciona a classe exit-popup para estilização via CSS
+      caixa.innerHTML = `
+        👀 Ei, não vá embora ainda!<br>
+        Aproveite as ofertas especiais do Ateliê Móveis ✨
+      `; // define o conteúdo da mensagem
+
+      // Adicionar ao body
+      document.body.appendChild(caixa); // insere a caixinha na página
+
+      // Remover depois de 4 segundos
+      setTimeout(() => { // função que espera 4 segundos
+        caixa.remove(); // remove a caixinha da página
+      }, 4000);
+    }
+  });
+</script>
+
 
 </body>
 </html>
